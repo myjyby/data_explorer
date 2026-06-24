@@ -1,0 +1,11 @@
+<header>
+  <div id='logo'>
+    <img src='/imgs/UN-logo.png'>
+  </div>
+  <h1>CRD 2.0: Multi-dimensional crisis explorer</h1>
+  <% if (locals.type === "explore") { %>
+    <%- include("./prompt.ejs", { prompt: locals.prompt }) %>
+  <% } else { %>
+    <%- include("./searchbar.ejs", { query: locals.query }) %>
+  <% } %>
+</header>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Risk DWH Search</title>
+  <script type="module" src="/js/pages/search.mjs"></script>
+  <link rel="stylesheet" type="text/css" href="/css/loader.css" />
+  <link rel="stylesheet" type="text/css" href="/css/arrows.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main_light.css" />
+</head>
+
+<body>
+  <!-- <h1>Search for multidimensional risk indicators</h1> -->
+  <%- include("./partials/head.ejs", { ctr: locals.ctr, query: locals.query, type: locals.type }) %>
+  <main>
+    <section class="indicators">
+      <div class="datasets">
+        <div class="scroll-x"></div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

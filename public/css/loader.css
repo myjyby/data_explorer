@@ -1,0 +1,37 @@
+/* 
+Credit to: https://css-loaders.com/dots/
+*/
+.loader-container {
+  width: 100%;
+  padding-top: 1em;
+  box-sizing: border-box;
+  grid-column: 1 / 4;
+}
+.loader {
+  position: relative;
+  width: 35px;
+  margin: auto;
+  aspect-ratio: 1;
+  --_g: no-repeat radial-gradient(circle closest-side,rgb(77,127,223) 90%,rgb(77,127,223));
+  background: 
+    var(--_g) 0    0,
+    var(--_g) 0    100%,
+    var(--_g) 100% 100%;
+  background-size: 40% 40%;
+  animation:l11 1s infinite linear;
+}
+@keyframes l11 {
+    25% {background-position:100% 0   ,0 100%,100% 100%}
+    50% {background-position:100% 0   ,0 0   ,100% 100%}
+    75% {background-position:100% 0   ,0 0   ,0    100%}
+    100%{background-position:100% 100%,0 0   ,0    100%}
+}
+.loader::after {
+  content: "Searching for relevant datasets…";
+  position: absolute;
+  line-height: 1.1em;
+  left: 100%;
+  margin-left: 1em;
+  font-size: .5em;
+  color: rgb(100,100,120);
+}

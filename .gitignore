@@ -1,0 +1,13 @@
+dep.*
+node_modules/
+local.env
+sql_conn.txt
+.env/
+Placenames/
+MR_inflation/
+Forecasts/
+.ipynd_checkpoints/
+*.ipynb
+__pycache__/
+*.sublime-*
+.DS_Store
