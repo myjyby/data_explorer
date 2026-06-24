@@ -100,7 +100,6 @@ const cookie = {
 
 const sessionMiddleware = session({
   name: 'CRD-session',
-  // secret: 'acclabspadspass',
   secret: process.env.SESSION_PASS,
   store: new PgSession({ pgPromise: DB }),
   resave: false,

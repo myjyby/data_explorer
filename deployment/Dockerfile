@@ -22,6 +22,7 @@ COPY . .
 RUN npm run sass-deploy
 RUN npm run build --if-present
 
+ARG PORT=3000
 ENV HOST=0.0.0.0
 ENV PORT=${PORT}
 EXPOSE ${PORT}
