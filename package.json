@@ -21,5 +21,9 @@
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "mssql": "^12.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "sass": "^1.101.0"
   }
 }

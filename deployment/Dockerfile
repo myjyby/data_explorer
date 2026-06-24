@@ -12,11 +12,11 @@ RUN apt-get install -y --no-install-recommends \
 RUN apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
-    wget \
+    wget
 RUN npm install -g npm@9.8
 WORKDIR /usr/src/app
 COPY package.json .
-COPY package-lock.json .
+COPY pnpm-lock.yaml .
 RUN npm install
 COPY . .
 RUN npm run sass-deploy

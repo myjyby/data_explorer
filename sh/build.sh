@@ -5,7 +5,7 @@ set -e
 cd -- "$( dirname -- "${BASH_SOURCE[0]}" )/../" &> /dev/null
 
 IMAGE_TAG="${IMAGE_TAG:-$(make -s name)}"
-IMAGE_NAME="DWHExplorer:${IMAGE_TAG}"
+IMAGE_NAME="dwhexplorer:${IMAGE_TAG}"
 PORT="${PORT:-2000}"
 
 make -s version-file
@@ -18,7 +18,7 @@ if [ -z "${IMAGE_LOCAL}" ]; then
         --platform linux/amd64 \
         --build-arg "PORT=${PORT}" \
         -t "${IMAGE_NAME}" \
-        -f deploy/Dockerfile \
+        -f deployment/Dockerfile \
         .
 else
     IMAGE_NAME="${IMAGE_NAME}-local"
@@ -26,7 +26,7 @@ else
     docker buildx build \
         --build-arg "PORT=${PORT}" \
         -t "${IMAGE_NAME}" \
-        -f deploy/Dockerfile \
+        -f deployment/Dockerfile \
         .
 fi
 
